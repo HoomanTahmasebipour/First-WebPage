@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web-Development Basics</title>
+	<link rel="stylesheet" type="text/css" href="firstpage.css">
+</head>
+<body>
+<center>
+	<h1>Web-development basics</h1>
+</center>
+<h2>Introductiong to HTML</h2>
+<h3> Requirements for all HTML code: </h3>
+	
+	<h6>Note: These are NOT necessary to compile, but MUST be there for <strong> organization. </strong></h6>
+
+		<p>Template which consists of the document type, all high level information (meta data) at the top of the code (head), and all content in the body.</p>
+		
+		<p> <strong> Good </strong> programming style with HTML uses <em> meaningful </em> tag names. So instead of "b" for bold or "i" for italicize, use "strong" or "em" (emphasis). </p>
+
+<h3> Comments </h3>
+	<h6> Note: Comments make code easier to <strong> understand. </strong></h6>
+
+		<p> The format for comments is: <*!-- --> (without the astrix). An example is below this line in the source code.</p>
+		<!-- This is a comment! -->
+		<p> Formatting is the same regardless of how many lines are to be commented. </p>
+		
+<h3> Block Level Elements </h3>
+	<h6>Each one get's its <strong> own </strong> line regardless of where it is placed.</h6>
+
+	<p> "h" tags (like h1, h2, h3 ..) and p tags are two of the block level elements. </p>
+
+<h3> Lists </h3>	
+	<p> There are two types of lists: Un ordered lists, and ordered lists. </p>
+	<p>The following is an ordered list:</p>
+		<ol>
+			<li>Red</li>
+			<li>Orange</li>
+			<li>Yellow</li>
+		</ol>
+	<p> The following is an unordered list:</p>
+		<ul id = 'hey'>
+			<li>Red</li>
+			<li>Orange</li>
+			<li>Yello</li>
+		</ul> 
+	<p> Can nest other tags inside list tag, including another level of lists.</p>
+	<h5> Example: </h5>
+		<ul>
+			<li>Red</li>
+				<ol>
+					<li>Rouge</li>
+					<li>Rose</li>
+					<li>Burgandy</li>
+				</ol> 
+			<li>Orange</li>
+			<li>Yellow</li>
+		</ul> 
+<h2> Introduction to CSS </h2>
+<h3> Preliminary notes </h3>
+	<p> Styling the document using Cascading Style Sheets (CSS) can be done in three different ways: 
+		<ol>
+			<li> In line styling - styling a part of the webpage by writing it directly into the HTML code. <strong id = 'noUse'> NOT RECOMMENDED </strong> </li>
+			<li> Head styling - creating an attribute in the head of the file, which can be refferenced by any elemnet of the code. <strong id = 'noUse'> NOT RECOMMENDED </strong> </li>
+			<li> Style Sheet - creating a seperate CSS file that contains all styling attributes, which is linked in the head. <strong id = 'use'> RECOMMENDED </strong> </li>
+		</ol>
+	</p>
+
+	<p> There are many, many style tags you can use in CSS, including: </p>
+		<ul>
+			<li><b>Color tag</b>, the most simple. There are four ways to define the color you want to select:</li>
+				<ol>
+					<li><em>rgb(_ _,_ _,_ _)</em> - The placeholder inside the brackets is for a number ranging from can 0 - 255 and dictate how concentrated the red, green, or blue is in the color. </li>
+					<li><em>#_ _ _ _ _ _a</em> - The placeholders after the pound symbol are for hexadecimal notation, allowing either numbers (from 0-9) or letters (from A - F) to fill in the spots. Each pair of two dictate the concerntration of a different color (red, green, blue). </li>
+					<li><em>rgba(_ _,_ _,_ _,_)</em> - The exact same as rgb, but the fourth slot (for a) signifies the transperancy of the text, and the number ranges from 0(min) to 1 (max).</li>
+					<li><em>name the color</em> - You can also use the 174 predefined colors offered by CSS itself, but they're too hard to remember so most people just use one of the above three (primarily the second one).</li>
+				</ol>
+			<li><b>Border tag</b>, which requires three properties that must be defined. The style of the border (solid?, dashed?,..), the width of the border (entered in pixels "px"), and its color (entered using the methods mentioned previously). </li>
+			<li><b>Background</b> tag, which can either be a color or an image. The image option has properties in of itself that enable you to alter the size of the background and if the image reapeats to cover the whole page or is just stretched until it does. </li>
+			<li><b>line-through</b> tag, while is what is sounds like. Multiple variants, essentialy adds a line through, under, or over a text.</li>
+			<li>And MORE....</li>
+		</ul>
+
+<h3> How to create and use a stylesheet </h3>
+<p> The way you select a part of the code to style are called selectors. Here are eight examples:</p>
+	<ul> 
+		<li><b>Element</b> - Selects all instances of a particular elemnt. Example below selects every li tag in HTML code.</li>
+			<ul>
+				<li> Ex: li {}</li>
+			</ul>
+		<li><b>ID</b> - Selects a particular instance of an element. Example below is selecting the element in th code that the #hello id is hooked to.</li>
+			<ul>
+				<li> Ex: #hello {}</li>
+			</ul>
+		<li><b>Class</b> - Selects all elemnts that are categorized by a class in the HTML code. Example below selects all elements that are hooked with the hello class.</li>
+			<ul>
+				<li> Ex: .hello {}</li>
+			</ul>
+		<li><b>Star</b> - Selects the entire HTML structure.</li>
+			<ul>
+				<li> Ex: * {}</li>
+			</ul>
+		</li><b>Descendant</b> - Used to select a specific descendant of a branch. In the example below, all a tags that are inside an li tag are selected.</li>
+			<ul>
+				<li> Ex: li a {}</li>
+			</ul>
+		<li><b>Adjacent</b> - Selects an element that is after (sibling) another specfied element. Example below is selecting all ul tags that come after an h4 tag.</li>
+			<ul>
+				<li> Ex: ul + h4 {}</li>
+			</ul>
+		<li><b>Attribute</b> - Selects an attribute inside a tag. example bellow selects all href attributes that point to google.com inside an a tag. </li>
+			<ul>
+				<li> Ex: a[href:hhtp://www.google.com] {}</li>
+			</ul>
+		<li><b>Nth of Type</b> - Selects the nth element of a particular type. example below selects the third element in any li tag.</li>
+			<ul>
+				<li> Ex: li:nth-of-type(3) {}</li>
+			</ul>
+	</ul>
+
+<h6>NOTE:</h6>
+	<p> <b>Inheritance</b>: If a style is applied to a tag that is the parent of other tags, its children will inherit that style.</p>
+	<p> <b>Specificity</b>: If a style is applied to the parent tag, and then another is applied to something within that tag, the more specific selector's trait is applied and the less specfic one is ignored.</p>
+
+
+</body>
+</html>
